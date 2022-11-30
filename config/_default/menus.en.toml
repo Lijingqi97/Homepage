@@ -1,0 +1,38 @@
+
+  [[main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/home/"
+  
+  [[main]]
+  name = "Publications"
+  weight = 300
+  identifier = "Publications"
+  url = "/Publications/"
+
+  [[main]]
+  name = "Researches"
+  weight = 200
+  identifier = "Researches"
+  url = "/Researches/"
+
+  [[main]]
+  name = "CV Download"
+  weight = 500
+  identifier = "accomplishments"
+  url = "/CV/"
+  #parent = "accomplishments"  
+
+
+#  [[main]]
+#  name = "Contact"
+#  weight = 600
+#  identifier = "contact"
+#  url = "/contact/"
+
+#  [[footer]]
+#  name = "imprint"
+#  weight = 1
+#  identifier = "imprint"
+#  url = "/imprint/"

@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <div
+    class="archive {{ with .Site.Params.doNotLoadAnimations }}
+      .
+    {{ else }}
+      animated fadeInDown
+    {{ end }}"
+  >
+    {{ range .Data.Pages.GroupByDate "2006" }}
+      <div class="archive__heading">{{ .Key }}</div>
+      {{ range .Pages }}
+        <ul class="archive__list">
+          
+          <div class="post__content">
+            <h3><a href="{{ .RelPermalink }}">{{ upper .Title }}</a></h3>
+            {{ if .Site.Params.description }}
+              <p>{{ .Page.Params.description | markdownify }}</p>
+            {{ else }}
+              <p>{{ .Summary | markdownify }}</p>
+            {{ end }}
+            <!-- add read more -->
+            {{- if and (.Truncated) (.Site.Params.readMore) -}}
+              <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
+            {{- end -}}
+          </div>
+          <!--  -->
+          
+          <em class="fas fa-calendar-day"></em>
+          <th class="post__footer-date"
+            >{{ if isset .Site.Params "indexdateformat" }}
+              {{ if .Site.Params.localizedDates }}
+                {{ time.Format .Site.Params.indexDateFormat .Date }}
+              {{ else }}
+                {{ .Date.Format .Site.Params.indexDateFormat }}
+              {{ end }}
+
+            {{ else }}
+              {{ if .Site.Params.localizedDates }}
+                {{ time.Format "Mon, Jan 2, 2006" .Date }}
+              {{ else }}
+                {{ .Date.Format "Mon, Jan 2, 2006" }}
+              {{ end }}
+
+            {{ end }}
+        </th>      
+          {{ with .Page.Params.Tags }}
+            {{ partial "taxonomy/tags.html" . }}
+          {{ end }}
+            
+            
+          
+        </ul>
+      {{ end }}
+
+    {{ end }}
+  </div>
+{{ end }}
