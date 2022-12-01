@@ -2,6 +2,7 @@ $accent--lightmode: #fff;
 $primary--lightmode: #464646;
 $primary-light--lightmode: #9f9f9f;
 $primary-lighter--lightmode: #eeeeee;
+$title-other--lightmode: #5239c6;
 $shadow--lightmode: 0 8px 16px rgba(10, 10, 10, 0.1);
 
 $accent--darkmode: #152028;
@@ -9,9 +10,10 @@ $primary--darkmode: #eeeeee;
 $primary-light--darkmode: #9f9f9f;
 $primary-lighter--darkmode: #464646;
 $shadow--darkmode: 0 8px 16px rgba(226, 226, 226, 0.1);
+$title-other--lightmode: #de1c1c;
 
 $warning: #ffc107;
-$info: #6086b4;
+$info: #387fb6;
 $success: #51d88a;
 $danger: #ef5753;
 
@@ -21,5 +23,5 @@ $body-max-width: 1920px;
 $sidebar-ratio: calc(1 - #{$content-ratio});
 $content-max-width: calc(#{$body-max-width} * #{$content-ratio});
 $sidebar-max-width: calc(#{$body-max-width} - #{$content-max-width});
-$content-width: calc(#{$content-ratio} * 100%);
-$sidebar-width: calc(#{$sidebar-ratio} * 100%);
+$content-width: calc(#{$content-ratio} * 120%);
+$sidebar-width: calc(#{$sidebar-ratio} * 80%);

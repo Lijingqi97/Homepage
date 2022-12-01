@@ -54,18 +54,17 @@
     }
 
     &-profileimage {
-      width: 127px;
-      height: 127px;
-      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      border-radius: 80%;
     }
 
     &-title {
-      text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 2px;
       line-height: 1;
       margin: 1em;
-
+      
       a {
         font-size: 3.2rem;
       }

@@ -2,9 +2,9 @@
   margin: 30px;
 
   &__heading {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     font-weight: 600;
-    line-height: 2.2em;
+    line-height: 2.0em;
 
     @include themed() {
       color: t('primary');
@@ -31,8 +31,9 @@
 
     &-title {
       display: inline-block;
-      flex: 0.96;
-      text-transform: uppercase;
+      flex: 1.2;
+      
+      font-weight: bold;
 
       @include themed() {
         color: t('primary');
