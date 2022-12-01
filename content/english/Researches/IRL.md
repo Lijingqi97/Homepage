@@ -8,7 +8,7 @@ description: 'To avoid potential risk, the aerodynamic load must be relieved thr
 ---
 ## 1. Background
 During the ascent phase, the launch vehicle has to suffer a huge aerodynamic load. If this load overweight structural limitation, it will be a disaster. To avoid potential risk, the aerodynamic load must be relieved through attitude control.
-{{< figure src="/images/IRL/current.png" alt="image" caption="Current load relief scheme" class="big" >}}
+{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/current.png?raw=true alt="image" caption="Current load relief scheme" class="big" >}}
 Current load relief schemes both have limitations, like low load reduction ratio and cannot adapt to changing environments.
 
 The motivation of this project is to design a new load relief scheme to achieve both high load reduction ratio and adaptivity on the real-time wind.
@@ -16,18 +16,18 @@ The motivation of this project is to design a new load relief scheme to achieve 
 ## 2. Challenge
 The reinforcement learning method has environmental adaptability, but designing a reward function artificially is difficult. Because load relief is only part of the launch task, and there is no mathematical definition of “good ascent flight”.
 Besides, the dynamics of the launch vehicle is highly dimensional, how to improve the load reduction ratio without affecting other functions of the vehicle control system is a problem.
-{{< figure src="/images/IRL/Controlsystem.png" alt="image" caption="Trajectory phases" class="medium" >}}
+{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/Controlsystem.png?raw=true alt="image" caption="Trajectory phases" class="medium" >}}
 
 ## 3. GAIL load relief scheme
 By analyzing each part of the control system, I designed the following GAIL Load relief scheme. 
-{{< figure src="/images/IRL/GAIL.png" alt="image" caption="GAIL load relief scheme" class="medium" >}}
+{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/GAIL.png?raw=true alt="image" caption="GAIL load relief scheme" class="medium" >}}
 
 The traditional Guidance System is replaced by GAIL agent, as this section interacts with the environment directly. Since the reward function is hard to design, the passive scheme is introduced to give demonstrations, refer to this set as a criterion, generative adversarial imitation learning framework is used for training.
 
 ## 4. Results
 This new scheme maintains aerodynamic load below 1000Pa in 64 different wind profiles. And performs more stable compared with the passive load relief method. 
-{{< figure src="/images/IRL/Results1.png" alt="image" caption="Aerodynamic load in 64 different wind profiles" class="medium" >}}
-{{< figure src="/images/IRL/Results2.png" alt="image" caption="Trajectory comparation with passive method" class="big" >}}
+{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/Results1.png?raw=true alt="image" caption="Aerodynamic load in 64 different wind profiles" class="medium" >}}
+{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/Results2.png?raw=true alt="image" caption="Trajectory comparation with passive method" class="big" >}}
 So this new scheme not only achieves both High load reduction ratio and Strong adaptivity, but also has stable performance.
 
 ## 5. Contribution
