@@ -1,5 +1,5 @@
 .post {
-  margin: 30px;
+  margin: 35px;
 
   @include themed() {
     background-color: t('accent');
@@ -58,7 +58,10 @@
     }
   }
 
+  
+
   &__content {
+    
     a {
       @include themed() {
         color: t('info');
@@ -92,12 +95,12 @@
         background-color: t('primary-lighter');
       }
     }
-
+    
     h1 {
       $font-size-h1: 3.0rem;
 
       font-size: $font-size-h1;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       line-height: 1.3;
 
       a {
@@ -110,10 +113,12 @@
     }
 
     h2 {
-      $font-size-h2: 2.2rem;
-
-      font-size: $font-size-h2;
+      $font-size-h2: 2.5rem;
       font-weight: 600;
+      font-size: $font-size-h2;
+      @include themed() {
+        color: t('title');
+      }
       
       line-height: 1;
 
@@ -131,9 +136,9 @@
 
       font-size: $font-size-h3;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       line-height: 1;
-
+      
       a {
         font-size: $font-size-h3;
 
@@ -142,10 +147,16 @@
         }
       }
     }
-
+    p {
+      /* 上边 | 右边 | 下边 | 左边 */
+      margin: 0px 0 20px 20px;
+    }
+    
     ul,
     ol {
-      line-height: 1.9em;
+      /* 上边 | 右边 | 下边 | 左边 */
+      
+      line-height: 1.5em;
       font-weight: 400;
     }
 
@@ -214,22 +225,22 @@
 
   &__footer {
     padding: 12px 0;
-
+    
     @include themed() {
       border-bottom: t('border');
     }
 
     &-date {
       font-size: 1.4rem;
-
+      margin: 0px 0 0px 20px;
       @include ltr {
-        margin-right: 10px;
-        margin-left: 5px;
+        margin-right: 15px;
+        margin-left: 15px;
       }
 
       @include rtl {
-        margin-left: 10px;
-        margin-right: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
       }
     }
   }

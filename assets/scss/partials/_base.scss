@@ -2,8 +2,9 @@
 
 * {
   @include ltr {
-    font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Work Sans', 'Hiragino Sans GB', sans-serif;
-    font-size: 1.6rem;
+    font-family: 'Georgia',serif,'PingHei', 'PingFang SC', 'Helvetica Neue', 'Work Sans', 'Hiragino Sans GB';
+    font-size: 1.8rem;
+    font-feature-settings: "smcp" off;
   }
 
   @include rtl {

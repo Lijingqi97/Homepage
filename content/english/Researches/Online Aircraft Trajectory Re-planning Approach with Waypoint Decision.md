@@ -7,7 +7,7 @@ series:
   - Aircraft Autonomous Trajectory Generation
 ---
 
-## Online Aircraft Trajectory Re-planning Approach with Waypoint Decision
+# Online Aircraft Trajectory Re-planning Approach with Waypoint Decision
 
 ## 1. Challenge
 As for the tactical online phase, like weather avoidence scenarios, the aircraft only has seconds to generate a trajectory, which means the method must be near real-time. The ICMI method cannot satisfy this performance requirement as solve hybrid variables together has computational burden. Introducing learning-based method for decision is possible to accelerate the solving process by separating different variables. However, in this waypoint decision problem, how to utilize the two-dimensional information behind the waypoint, and create a decision neural network that has adaptability is challenging.

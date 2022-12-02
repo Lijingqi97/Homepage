@@ -7,7 +7,7 @@ series:
   - Aircraft Autonomous Trajectory Generation
 ---
 
-## Effective Mixed-Integer Trajectory Planning Approach for Large Aircraft
+# Effective Mixed-Integer Trajectory Planning Approach for Large Aircraft
 
 ## 1. Challenge
 Typically, aircraft trajectory planning is formulated as an optimal control problem. However, the feature of aircraft dynamics makes the problem highly non-convexity. And introducing isolated waypoint decisions poses a Mixed-integer optimal control problem, this problem is hard to solve effectively because of following reasons:

@@ -1,0 +1,98 @@
+.research {
+  margin: 30px;
+  
+  &__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 2.0em;
+
+    @include themed() {
+      color: t('primary');
+    }
+  }
+
+  &__list {
+    padding: 2px; 
+    
+    box-shadow: 5px 5px;
+    @include themed() {
+      box-shadow-color: t('primary-light');
+      border-left: 1px solid t('primary-light');
+      border-top: 1px solid t('primary-light');
+    };
+    border-radius: 10px;
+    
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.1px;
+      list-style-type: none;
+    }
+    &-title {
+      display: inline-block;
+      flex: 1.0;
+      margin: 0;
+      font-weight: bold;
+      font-size: 2.5rem;
+      @include themed() {
+        color: t('primary');
+      }
+      &:hover {
+        @include themed() {
+          color: t('info');
+        }
+      }
+    }
+    
+    &-abstractblock {
+      
+      margin: 0 10px 0 20px;
+      
+      h1{
+        font-size: 2.5rem;
+        font-weight: 600;
+        letter-spacing: 0.8px;  
+        line-height: 1;
+        
+        a {
+          @include themed() {
+            color: t('primary');
+          }
+        
+          &:hover {
+            @include themed() {
+              color: t('info');
+            }
+          }
+        }    
+      }
+      p{
+        margin: 0px 0px 10px 15px;
+        font-size: 1.8rem;
+        line-height: 1.2;
+      }
+      
+    }
+  }
+  &__footer {
+    padding: 12px 0;
+    
+    @include themed() {
+      border-bottom: t('border');
+    }
+
+    &-date {
+      font-size: 1.4rem;
+      margin: 0px 0 0px 20px;
+      @include ltr {
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+
+      @include rtl {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
