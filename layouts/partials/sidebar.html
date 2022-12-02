@@ -12,15 +12,11 @@
         src="{{ .Site.Params.profilePicture | relURL }}"
         alt="profile picture"
       />
-      {{ if .IsHome }}
-        <div class="sidebar__introduction-title">
-          {{ .Site.Params.title }}
-        </div>
-      {{ else }}
-        <div class="sidebar__introduction-title">
-          <div>{{ .Site.Params.title }}</div>
-        </div>
-      {{ end }}
+      
+      <div class="sidebar__introduction-title">
+        <div>{{ .Site.Params.title }}</div>
+      </div>
+      
       <div class="sidebar__introduction-description">
         <p>{{ replace .Site.Params.description "\n" "<br />" | safeHTML }}</p>
         <p>{{ replace .Site.Params.location "\n" "<br />" | safeHTML }}</p>
