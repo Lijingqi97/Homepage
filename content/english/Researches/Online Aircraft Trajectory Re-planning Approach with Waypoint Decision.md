@@ -16,9 +16,8 @@ As for the tactical online phase, like weather avoidence scenarios, the aircraft
 - **Adaptability performance**
 
 ## 2. Decision-Generation Method
-{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/CommercialAircraft/DGM.png?raw=true alt="image" caption="DGM procedure" class="medium" >}}
-
-In this method, the strategy network is innovative.
+{{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/CommercialAircraft/DGM.png?raw=true alt="image" caption="DGM procedure" class="medium" >}} 
+In this method, the strategy network is innovative. 
 {{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/CommercialAircraft/transfer.png?raw=true alt="image" caption="Design Strategy Network" class="big" >}}
 
 ## Contribution
