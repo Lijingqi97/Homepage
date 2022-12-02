@@ -1,7 +1,7 @@
 .body {
   width: 100%;
   
-  margin: 2.5% auto 5px 0;
+  margin: 0 auto 5px 0;
   // work around to style body
   @include themed() {
     color: t('primary');
