@@ -20,7 +20,7 @@
   [[main]]
   name = "CV Download"
   weight = 500
-  identifier = "accomplishments"
+  identifier = "CV Download"
   url = "/CV/"
   #parent = "accomplishments"  
 
