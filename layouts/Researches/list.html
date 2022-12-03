@@ -9,34 +9,50 @@
     {{ range .Data.Pages.GroupByDate "2006" }}
       <div class="research__heading">{{ .Key }}</div>
       {{ range .Pages }}
-        <ul class="research__list">
+        
+        <ul class="research__list-item">
+          
           <div class="research__list-abstractblock">
             <th>
-              <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-              <p>{{ if .Site.Params.description }}
-                {{ .Page.Params.description | markdownify }}
-              {{ else }}
-                {{ .Summary | markdownify }}
-              {{ end }}
-              <!-- add read more -->
-              {{- if and (.Truncated) (.Site.Params.readMore) -}}
-                <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
-              {{- end -}}
-              </p>
+              <div class="research__abstract">
+                <a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
+              </div>
               
-
+              
             </th>
+            <!--  -->
+            <th class="research__list-item">
+              <ul class="research__overblock">
+              <th>
+                <a href="{{ .RelPermalink }}">
+                  <img class="research__thumbnail" src="{{ .Params.image | relURL }}" alt="Thumbnail image" loading="lazy" />
+                </a>
+              </th>
+              <p>
+                       
+                {{ if .Site.Params.description }}
+                  {{ .Page.Params.description | markdownify }}
+                {{ else }}
+                  {{ .Summary | markdownify }}
+                {{ end }}
+                </p>
+              </ul>
+             
+              <!-- add read more -->
+              <div class="research__list-title"><a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a></div>
+              
             
-            <footer class="fas fa-calendar-day">              
-            </footer>
-            <th class="research__footer-date"
+              <footer class="fas fa-calendar-day">              
+              </footer>
+      
+              <th class="research__footer-date"
               >{{ if isset .Site.Params "indexdateformat" }}
                 {{ if .Site.Params.localizedDates }}
                   {{ time.Format .Site.Params.indexDateFormat .Date }}
                 {{ else }}
                   {{ .Date.Format .Site.Params.indexDateFormat }}
                 {{ end }}
-
+      
               {{ else }}
                 {{ if .Site.Params.localizedDates }}
                   {{ time.Format "Mon, Jan 2, 2006" .Date }}
@@ -44,22 +60,17 @@
                   {{ .Date.Format "Mon, Jan 2, 2006" }}
                 {{ end }}
               {{ end }}
+              {{ with .Page.Params.Tags }}
+              {{ partial "taxonomy/tags.html" . }}
+              {{ end }}
+              <br />
+              </th>
             </th>
-            
-            {{ with .Page.Params.Tags }}
-            {{ partial "taxonomy/tags.html" . }}
-            {{ end }}
-            <br />
           </div>
-          <!--  -->
           
-          
-                
-          
-            
-            
           
         </ul>
+        
       {{ end }}
 
     {{ end }}

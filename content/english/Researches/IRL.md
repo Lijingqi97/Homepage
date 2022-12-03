@@ -5,6 +5,7 @@ draft: false
 tags: 
   - Inverse Reinforcement Learning
 description: 'To avoid potential risk, the aerodynamic load must be relieved through attitude control. Current load relief schemes both have limitations, like low load reduction ratio and cannot adapt to changing environments. This project develops a load relief scheme via IRL (Inverse Reinforcement Learning) to achieve both high load reduction ratio and adaptivity on changing environments.'
+image: "images/IRL/GAILcover.png"
 ---
 ## 1. Background
 During the ascent phase, the launch vehicle has to suffer a huge aerodynamic load. If this load overweight structural limitation, it will be a disaster. To avoid potential risk, the aerodynamic load must be relieved through attitude control.
@@ -26,8 +27,10 @@ The traditional Guidance System is replaced by GAIL agent, as this section inter
 
 ## 4. Results
 This new scheme maintains aerodynamic load below 1000Pa in 64 different wind profiles. And performs more stable compared with the passive load relief method. 
+
 {{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/Results1.png?raw=true alt="image" caption="Aerodynamic load in 64 different wind profiles" class="medium" >}}
 {{< figure src=https://github.com/Lijingqi97/JingqiLI_Homepage/blob/main/static/images/IRL/Results2.png?raw=true alt="image" caption="Trajectory comparation with passive method" class="big" >}}
+
 So this new scheme not only achieves both High load reduction ratio and Strong adaptivity, but also has stable performance.
 
 ## 5. Contribution
